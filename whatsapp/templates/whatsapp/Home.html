@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="cmyk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    {% load static tailwind_tags %}
+    {% tailwind_css %}
+</head>
+<body class="px-80">
+    <header>
+        <nav class="flex items-center justify-between">
+            <div> 
+                <img src="https://ghala.tz/images/logo/ghala-logo.svg" alt="logo" class="w-20 h-20">
+            </div>
+            <div class="flex items-center">
+                <a  class="text-slate-600 mx-3 hover:text-green-500 hover:cursor-pointer transition-transform transform hover:scale-110 text-lg">Home</a>
+                <a class="text-slate-700 mx-3 hover:text-green-500 hover:cursor-pointer transition-transform transform hover:scale-110 text-lg">Shops</a>
+                <a class="text-slate-700 mx-3 hover:text-green-500 hover:cursor-pointer transition-transform transform hover:scale-110 text-lg">About</a>
+                <a class="text-slate-700 mx-3 hover:text-green-500 hover:cursor-pointer transition-transform transform hover:scale-110 text-lg">Locations</a>
+                <button class="bg-green-600 px-5 rounded  hover:cursor-pointer transition-transform transform hover:scale-110 text-sm text-white py-1">Get started</button>
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

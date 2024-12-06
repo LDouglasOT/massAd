@@ -1,0 +1,83 @@
+{% extends "whatsapp/dashboard-template.html" %}
+{% block content %}
+{% load static %}
+{% load tailwind_tags %}
+{% tailwind_css %}
+    <div class="max-w-10xl mx-auto p-10 ">
+        <!-- Tabs and Stats -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="text-sm text-gray-600">
+                <span class="mr-4">Total Customers: <span class="font-medium">2000</span></span>
+                <span>Paid: <span class="font-medium">1800</span></span>
+            </div>
+        </div>
+        <div class="flex justify-between items-center mb-8">
+            <div class="flex items-center gap-4">
+                <h1 class="text-xl font-semibold">Members</h1>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm">Refresh list</button>
+                <button class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm">Export members (Excel)</button>
+            </div>
+        <a  href="{% url 'Notifications' %}" 
+            class="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+            aria-label="Send Notification">
+            <svg 
+                class="w-4 h-4" 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24" 
+                aria-hidden="true">
+                <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .417-.163.822-.435 1.122L4 17h5m6 0a3.001 3.001 0 01-6 0m6 0H9" />
+            </svg>
+            Send Notification
+        </a>
+        
+        
+        </div>
+
+        <div class="bg-white rounded-lg shadow">
+            <table class="w-full">
+                <thead>
+                    <tr class="text-left text-sm text-gray-500 border-b">
+                        <th class="px-6 py-4">Photo</th>
+                        <th class="px-6 py-4">Member name</th>
+                        <th class="px-6 py-4">Mobile</th>
+                        <th class="px-6 py-4">Purchases(UGX)</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4">Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <tr class="border-b">
+                        <td class="px-6 py-4">
+                            <img src="https://avatars.githubusercontent.com/u/89447046?v=4" alt="George" class="w-10 h-10 rounded-full">
+                        </td>
+                        <td class="px-6 py-4">George Lindelof</td>
+                        <td class="px-6 py-4">+256740733532</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 font-bold text-lg text-green-700 rounded-full">50000</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs">Active</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex gap-2">
+                                <button class="text-red-600 flex items-center bg-slate-100 px-5 py-1 rounded-md">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                        Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

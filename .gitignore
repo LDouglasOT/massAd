@@ -1,0 +1,52 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+*.env
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+.vscode/
+.idea/
+*.swp
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+
+# Pytest
+.cache/
+
+# Migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Security
+secrets.json
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

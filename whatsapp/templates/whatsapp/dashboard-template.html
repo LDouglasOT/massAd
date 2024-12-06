@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cmyk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static tailwind_tags %}
+    {% tailwind_css %}
+</head>
+<body class="bg-white">
+<div class="flex ">
+
+    <div class="sidebar shadow-2xl flex flex-col items-start px-6 py-4 justify-between fixed h-screen">
+
+        <div>
+            <div class="w-full pl-4 my-7">
+                <h3 class="my-4 text-2xl mx-auto font-bold">MassAd</h3>
+            </div>
+       
+            
+            <ul class="space-y-5 w-full">
+                <a href="{% url 'Dashboard' %}" class="my-4">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-2">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/material/24/dashboard-layout.png" alt="dashboard-layout"/>
+                    Analytics
+                </li>
+                </a>
+                <a  href="{% url 'Products' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                 
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/ios-filled/50/fast-moving-consumer-goods.png" alt="fast-moving-consumer-goods"/>
+                    Products
+               
+                </li>
+                </a>
+                <a  href="{% url 'qrcode' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/external-zen-filled-royyan-wijaya/50/external-comments-communication-zen-filled-royyan-wijaya.png" alt="external-comments-communication-zen-filled-royyan-wijaya"/>
+                    Chats
+                </li>
+                </a>  
+                <a  href="{% url 'qrcode' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/metro/50/connected.png" alt="connected"/>
+                    Connect
+                </li>
+                </a>  
+                <a  href="{% url 'Sales' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/ios-filled/50/total-sales-1.png" alt="total-sales-1"/>
+                    Sales
+                </li>
+                </a>
+                <a  href="{% url 'Customers' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/plumpy/24/crowd.png" alt="crowd"/>
+                    Customers
+                </li>
+                </a>
+                <a  href="{% url 'Dashboard' %}" class="my-2">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/ios-filled/50/settings.png" alt="settings"/>
+                    Settings
+                </li>
+                </a>
+                <a  href="{% url 'Dashboard' %}" class=" my-3">
+                <li class="flex items-center text-xl cursor-pointer hover:bg-green-400 px-4 py-2 rounded w-full hover:text-white my-3">
+                    <img width="24" height="24" class="mr-3" src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="profile"/>
+                    My Profile
+                </li>
+            </a>
+            </ul>
+        </div>
+
+        <div class="w-full">
+            <button class="flex items-center text-xl text-red-600 font-semibold cursor-pointer bg-red-100 px-4 py-2 rounded w-full">
+                <img width="24" height="24" class="mr-3" src="https://img.icons8.com/ios-filled/50/logout-rounded-left.png" alt="logout"/>
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="content  ml-2/12 w-10/12">
+        <div class="p-1">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+<style>
+
+.sidebar{
+width: 15%;
+}
+.content{
+    width: 85%;
+    margin-left: 15%;
+}
+
+
+</style>
+</div> 
+</body>
+</html>
